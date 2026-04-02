@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logoHorizontal from "../Content/Imagens/logo-hagana-horizontal.svg";
 import facebook from "../Content/Imagens/facebook.svg";
 import instagram from "../Content/Imagens/instagram.svg";
@@ -9,13 +10,13 @@ export default function FooterSimple() {
     <footer className="footer simple">
       <div className="footer-div">
         <div className="footer-div__logo">
-          <a href="/">
+          <Link to="/">
             <img
               src={logoHorizontal}
               alt="Tevel News Logo"
               title="Tevel News Logo"
             />
-          </a>
+          </Link>
         </div>
         <div className="footer-div__social">
           <a className="link" href="/">

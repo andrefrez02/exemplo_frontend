@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import LayoutFull from "./Views/LayoutFull";
 import LayoutHalf from "./Views/LayoutHalf";
 import LayoutSimple from "./Views/LayoutSimple";
@@ -23,6 +23,7 @@ function AppRoutes() {
       </Route>
 
       <Route path="/noticias" element={<Noticias />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
 }

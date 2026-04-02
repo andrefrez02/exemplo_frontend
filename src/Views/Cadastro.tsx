@@ -1,8 +1,16 @@
+import { Link, useNavigate } from "react-router-dom";
 import megafone from "../Content/Imagens/megafone.svg";
 import predioHagana from "../Content/Imagens/predio-hagana.png";
 import jornalista from "../Content/Imagens/jornalista.gif";
 
 export default function cadastro() {
+  const navigate = useNavigate();
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    navigate("/noticias");
+  };
+
   const renderizarItens2 = () => {
     const elementos = [];
 
@@ -72,14 +80,14 @@ export default function cadastro() {
     <>
       <div className="cadastro__bg"></div>
       <main className="cadastro">
-        <form action="/noticias" className="cadastro-form">
+        <form className="cadastro-form" onSubmit={handleSubmit}>
           <div className="cadastro-form__header">
             <div className="cadastro-form__header-bg">
               <img src={megafone} alt="" />
               <h1>CADASTRO DE NOTÍCIAS E OCORRÊNCIAS</h1>
-              <a href="/" className="cancelBtn">
+              <Link to="/" className="cancelBtn">
                 CANCELAR <span>X</span>
-              </a>
+              </Link>
             </div>
           </div>
 

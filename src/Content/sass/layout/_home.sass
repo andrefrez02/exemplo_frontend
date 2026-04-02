@@ -2,6 +2,61 @@
 @use '../base/_mixins' as *
 @use 'sass:color'
 
+.home-notice
+  position: fixed
+  inset: 0
+  z-index: 20
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 24px
+
+  &__backdrop
+    position: absolute
+    inset: 0
+    background: color.scale($dark-2-color, $alpha: -20%)
+    backdrop-filter: blur(6px)
+
+  &__dialog
+    position: relative
+    z-index: 1
+    width: min(820px, 100%)
+    max-height: min(85vh, 760px)
+    overflow-y: auto
+    padding: 32px
+    border: 1px solid color.scale($secondary-color, $alpha: -55%)
+    border-radius: 18px
+    background: linear-gradient(180deg, color.scale($fourth-color, $lightness: -8%), color.scale($fourth-color, $lightness: -18%))
+    box-shadow: 0 24px 80px #00000090
+
+    h2
+      @include font-style(Medium, 2em)
+      margin-bottom: 18px
+      padding-right: 48px
+
+    p
+      @include font-style(Regular, 1em)
+      color: #f0f4ff
+      margin: 0 0 16px
+      line-height: 1.7
+
+  &__close
+    position: absolute
+    top: 18px
+    right: 18px
+    width: 42px
+    height: 42px
+    border: 0
+    border-radius: 999px
+    background-color: $brand-color
+    color: #fff
+    font-size: 1.25em
+    font-weight: bold
+    cursor: pointer
+
+    &:hover
+      background-color: color.scale($brand-color, $lightness: -10%)
+
 .home
   @include wrapper
   @include shadow(false)

@@ -1,13 +1,22 @@
+import { Link, useNavigate } from "react-router-dom";
+
 export default function Login() {
+  const navigate = useNavigate();
   const css = `html, #root {
     height: -webkit-fill-available;
   }`;
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    navigate("/noticias");
+  };
+
   return (
     <>
       <style>{css}</style>
       <div className="login__bg"></div>
       <main className="login">
-        <form action="/noticias" className="login-form">
+        <form className="login-form" onSubmit={handleSubmit}>
           <div className="login-form__header">
             <h1>Acesse sua conta</h1>
           </div>
@@ -29,12 +38,12 @@ export default function Login() {
             Entrar
           </button>
           <div className="login-form__link-group">
-            <a href="/" className="login-form__link">
+            <Link to="/" className="login-form__link">
               Esqueceu a senha?
-            </a>
-            <a href="/" className="login-form__link">
+            </Link>
+            <Link to="/cadastro" className="login-form__link">
               Não tem uma conta? Cadastre-se
-            </a>
+            </Link>
           </div>
         </form>
       </main>

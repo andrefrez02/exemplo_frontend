@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logoVertical from "../Content/Imagens/logo-hagana-vertical.svg";
 import linkIcon from "../Content/Imagens/link-icon.svg";
 import emailIcon from "../Content/Imagens/email-icon.svg";
@@ -13,7 +14,7 @@ export default function FooterFull() {
     <footer className="footer">
       <div className="footer-div">
         <div className="footer-div__logo">
-          <a href="/">
+          <Link to="/">
             <img
               src={logoVertical}
               alt="Tevel News Logo"
@@ -21,7 +22,7 @@ export default function FooterFull() {
             />
             <small>Desenvolvimento</small>
             <span>Equipe BI & TI</span>
-          </a>
+          </Link>
         </div>
         <div className="footer-div__info">
           <a className="link" href="https://erp-app-prod.grupohagana.com.br">
@@ -42,15 +43,15 @@ export default function FooterFull() {
           </a>
         </div>
         <div className="footer-div__links">
-          <a className="link" href="/">
+          <Link className="link" to="/">
             Grupo Haganá
-          </a>
-          <a className="link" href="/">
+          </Link>
+          <Link className="link" to="/noticias">
             Haganá Tevel
-          </a>
-          <a className="link" href="/">
+          </Link>
+          <Link className="link" to="/cadastro">
             Checkpoint
-          </a>
+          </Link>
         </div>
         <div className="footer-div__social">
           <a className="link" href="/">

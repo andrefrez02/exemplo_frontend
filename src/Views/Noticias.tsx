@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import logoTevel from "../Content/Imagens/logo.svg";
 import HighlightText from "../Components/HighlightText";
@@ -96,9 +97,9 @@ export default function Noticias() {
           </aside>
           <section className="centro">
             <header className="logo">
-              <a href="/">
+              <Link to="/">
                 <img src={logoTevel} alt="" />
-              </a>
+              </Link>
             </header>
             <div
               className={`destaque ${isFullscreen ? "fullscreen" : ""}`}
@@ -138,13 +139,13 @@ export default function Noticias() {
               <h1>OCORRÊNCIAS RECENTES</h1>
             </div>
             <div className="ocorrencias__list">{renderizarItens2()}</div>
-            <a
-              href="/cadastro"
+            <Link
+              to="/cadastro"
               className="ocorrencias__list-add"
               style={{ display: isFullscreen ? "none" : "block" }}
             >
               Cadastrar
-            </a>
+            </Link>
           </div>
         </aside>
         <footer

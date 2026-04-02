@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "../Content/Imagens/logo.svg";
 import logoHagana from "../Content/Imagens/logo-hagana.svg";
 
@@ -6,14 +7,14 @@ export default function HeaderSimple() {
     <header className="header simple">
       <div className="header-div">
         <div className="header-div__logo">
-          <a href="/">
+          <Link to="/">
             <img src={logo} alt="Tevel News Logo" title="Tevel News Logo" />
-          </a>
+          </Link>
         </div>
         <div className="header-div__options">
-          <a href="/">
+          <Link to="/noticias">
             <img src={logoHagana} alt="" />
-          </a>
+          </Link>
         </div>
       </div>
     </header>
