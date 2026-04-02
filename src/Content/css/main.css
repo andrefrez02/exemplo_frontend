@@ -272,7 +272,7 @@ textarea {
   z-index: -1;
   top: 0;
   left: 0;
-  background-image: linear-gradient(45deg, rgba(204, 34, 41, 0.05), rgba(37, 39, 102, 0.5)), url(../src/content/imagens/bg3.jpg);
+  background-image: linear-gradient(45deg, rgba(204, 34, 41, 0.05), rgba(37, 39, 102, 0.5)), url(../Imagens/bg3.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -432,7 +432,7 @@ textarea {
   z-index: -1;
   top: 0;
   left: 0;
-  background-image: linear-gradient(45deg, rgba(37, 39, 102, 0.1), rgba(37, 39, 102, 0.8)), url(../src/content/imagens/bg3.jpg);
+  background-image: linear-gradient(45deg, rgba(37, 39, 102, 0.1), rgba(37, 39, 102, 0.8)), url(../Imagens/bg3.jpg);
   background-position: center, 0 40%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -479,7 +479,7 @@ textarea {
   z-index: -1;
   top: 0;
   left: 0;
-  background-image: linear-gradient(45deg, rgba(15, 15, 22, 0.1), rgba(15, 15, 22, 0.2)), url(../src/content/imagens/bg3.jpg);
+  background-image: linear-gradient(45deg, rgba(15, 15, 22, 0.1), rgba(15, 15, 22, 0.2)), url(../Imagens/bg3.jpg);
   background-position: center, 0 bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -595,7 +595,7 @@ textarea {
   top: 0;
   left: 0;
   z-index: -1;
-  background-image: url(../src/content/imagens/formulariobg.png);
+  background-image: url(../Imagens/formulariobg.png);
   background-position: center;
   background-size: 100% 100%;
   background-color: rgba(0, 0, 0, 0.8666666667);
@@ -608,7 +608,7 @@ textarea {
   z-index: -1;
   top: 0;
   left: 0;
-  background-image: linear-gradient(45deg, rgba(37, 39, 102, 0.1), rgba(37, 39, 102, 0)), url(../src/content/imagens/globobg.png), url(../src/content/imagens/bg3-inv.jpg);
+  background-image: linear-gradient(45deg, rgba(37, 39, 102, 0.1), rgba(37, 39, 102, 0)), url(../Imagens/globobg.png), url(../Imagens/bg3-inv.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -690,7 +690,7 @@ textarea {
   z-index: -1;
   top: 0;
   left: 0;
-  background-image: linear-gradient(45deg, rgba(204, 34, 41, 0.05), #252766), url(../src/content/imagens/bg3.jpg);
+  background-image: linear-gradient(45deg, rgba(204, 34, 41, 0.05), #252766), url(../Imagens/bg3.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -763,7 +763,7 @@ textarea {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url(../src/content/imagens/jornalista.gif);
+  background-image: url(../Imagens/jornalista.gif);
   background-position: center 0%;
   background-size: cover;
   transition: 1s linear;
@@ -1231,7 +1231,7 @@ textarea {
   top: 0;
   left: 0;
   z-index: -1;
-  background-image: url(../src/content/imagens/formulariobg2.png);
+  background-image: url(../Imagens/formulariobg2.png);
   background-position: center;
   background-size: 100% 100%;
   background-color: rgba(0, 0, 0, 0.8666666667);
@@ -1244,7 +1244,7 @@ textarea {
   z-index: -1;
   top: 0;
   left: 0;
-  background-image: linear-gradient(45deg, rgba(37, 39, 102, 0.4), rgba(37, 39, 102, 0.4)), url(../src/content/imagens/bg4.jpg);
+  background-image: linear-gradient(45deg, rgba(37, 39, 102, 0.4), rgba(37, 39, 102, 0.4)), url(../Imagens/bg4.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
