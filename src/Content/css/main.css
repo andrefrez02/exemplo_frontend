@@ -262,7 +262,7 @@ textarea {
 .home-notice__backdrop {
   position: absolute;
   inset: 0;
-  background: rgba(15, 15, 22, 0.8);
+  background: rgba(23, 23, 26, 0.8);
   backdrop-filter: blur(6px);
 }
 .home-notice__dialog {
@@ -274,7 +274,7 @@ textarea {
   padding: 32px;
   border: 1px solid rgba(16, 138, 232, 0.45);
   border-radius: 18px;
-  background: linear-gradient(180deg, rgb(24.035971223, 25.3543165468, 65.964028777), rgb(19.0179856115, 20.0316546763, 52.4820143885));
+  background: linear-gradient(180deg, rgb(34.04, 35.88, 93.84), rgb(30.34, 31.98, 83.64));
   box-shadow: 0 24px 80px rgba(0, 0, 0, 0.5647058824);
 }
 .home-notice__dialog h2 {
@@ -309,7 +309,7 @@ textarea {
   cursor: pointer;
 }
 .home-notice__close:hover {
-  background-color: rgb(173.9817351598, 26.8182648402, 34.7351598174);
+  background-color: rgb(183.6, 30.6, 36.9);
 }
 
 .home {
