@@ -1,0 +1,511 @@
+@use '../_vars' as *
+@use '../base/_mixins' as *
+@use 'sass:color'
+
+.noticias__grid
+  display: grid
+  grid-template-rows: 1fr .2fr
+  grid-template-columns: .7fr .35fr
+  height: 100%
+  column-gap: 40px
+
+.noticias
+  @include wrapper
+  height: $fill
+  position: relative
+  z-index: 1
+  display: grid
+  grid-template-columns: 1fr 3.8fr
+  align-items: start
+  grid-auto-rows: 1fr
+  grid: 1/1
+
+  &__bg
+    width: $fill
+    height: $fill
+    position: fixed
+    z-index: -1
+    top: 0
+    left: 0
+    background:
+      image: linear-gradient(45deg, color.scale($brand-color, $alpha: -95%), color.scale($fourth-color, $alpha: -0%)), url(../src/content/imagens/bg3.jpg)
+      position: center
+      repeat: no-repeat
+      size: cover
+      color: #00000066
+    filter: opacity(.5) brightness(1) blur(2px)
+    user-select: none
+    -moz-user-select: none
+    -webkit-user-select: none
+    pointer-events: none
+
+  .globo
+    margin-left: -160px
+    margin-top: 100px
+    width: 550px
+    height: 200px
+
+    img
+      width: 100%
+      aspect-ratio: 1/1
+
+  .centro
+    position: relative
+    height: -webkit-fill-available
+    display: flex
+    flex-direction: column
+    margin-inline: 0 30px
+
+    .logo
+      margin-left: -160px
+      margin-top: 30px
+      width: 220px
+
+      img
+        width: 100%
+        height: $fill
+
+    .destaque
+      width: 100%
+      height: 100%
+      margin-block: 40px 30px
+      background-color: #fff
+      border-radius: 15px
+      overflow: hidden
+      position: relative
+      transition: 1s linear
+
+      &.fullscreen
+        top: -40px
+        left: 0
+        border-radius: 0
+        transition: .4s linear
+
+        img
+          bottom: 100px
+          right: 50px
+
+      img
+        position: absolute
+        z-index: 3
+        bottom: 5px
+        right: 5px
+        scale: 0.8
+        cursor: pointer
+        transition: 1s linear
+
+      &::after
+        content: ''
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        background-image: url(../src/content/imagens/jornalista.gif)
+        background-position: center 0%
+        background-size: cover
+        transition: 1s linear
+
+  &__footer
+    display: flex
+    width: $fill
+    z-index: 1
+    position: relative
+    padding: 15px
+    grid-area: 2/1/2/2
+    gap: 15px
+    transition: .5s ease-in-out
+
+    .temp
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: center
+      align-content: flex-start
+      flex-wrap: wrap
+      height: 132px
+
+      svg
+        display: flex
+        width: 100%
+        left: 100%
+        position: relative
+        transform: translate(-50%, 0)
+        stroke: #0000009f
+
+        text
+          text-anchor: middle
+
+      &__icon
+        background-color: $fourth-focus-color
+        flex: 1 auto
+        width: 55px
+        height: 55px
+        display: flex
+        align-items: center
+        justify-content: center
+
+      &__text
+        @include font-style(Regular, 2rem)
+        @include shadow(true, $spread: 10px, $blur: 15px, $color: #2227)
+        background-color: $desat-fourth-color
+        display: flex
+        text-align: center
+        align-items: center
+        justify-content: center
+        flex: 1 auto
+        width: 55px
+        height: 55px
+
+      &__subtext
+        text-align: center
+        flex: 1 auto
+        width: 55px
+        height: 55px
+
+        &-cidade
+          @include font-style(Regular, 1.375rem)
+          background-color: $fourth-focus-color
+          text-shadow: 0 0 1px #000
+
+        &-hora
+          @include font-style(Regular, 1.125rem)
+          background-color: $brand-focus-color
+
+    .logo
+      $border: 5px
+      width: 128px
+      height: calc(127px - $border)
+      background-color: $fourth-focus-color
+      border-bottom: $border $brand-focus-color solid
+      display: flex
+      align-items: center
+      justify-content: center
+
+      img
+        width: 100%
+        height: $fill
+        padding-block: 5px 5px
+        filter: brightness(100)
+
+    .headline
+      display: flex
+      flex-direction: column
+      width: $fill
+
+      .categoria
+        display: flex
+        justify-content: space-between
+        margin-inline: 6px
+
+        &__bg
+          background-color: $brand-color
+          width: $fit
+          border-radius: 3px 3px 0 0
+          padding: 4px 10px 0
+          height: 1.85em
+          display: flex
+          align-items: baseline
+          justify-content: center
+
+          h1, h2
+            @include font-style($family: SemiBold, $size: 1.875em, $line-height: 1)
+            @include text-shadow(10px)
+
+      .destaque
+        width: $fill
+
+        &__title
+          @include font-style($family: SemiBold, $size: 2.35em)
+          background-color: $fourth-focus-color
+          border-bottom: 5px solid $brand-focus-color
+          padding-inline: 18px
+          width: $fill
+
+        &__subtitle
+          @include font-style($family: Medium, $size: 1.2em)
+          background-color: #fff
+          color: #000
+          padding-inline: 18px
+          width: $fit
+
+  &__scroller
+    display: flex
+    width: $fill
+    z-index: 1
+    position: relative
+    padding: 15px
+    grid-area: 3 / 1 / 4 / 3
+    align-items: center
+    justify-content: flex-start
+    flex-direction: row
+    flex-wrap: nowrap
+
+    &-icon
+      width: 60px
+      height: 60px
+      display: flex
+      z-index: 2
+      position: relative
+      margin-inline: 0 -25px
+      margin-top: -12px
+
+      img
+        width: 100%
+        height: 100%
+
+    &-items
+      position: relative
+      z-index: 1
+      background-color: $brand-focus-color
+      width: $fill
+      margin-inline: 0 -20px
+      border-radius: 5px 0 0 5px
+      display: flex
+      align-items: center
+      flex-direction: row
+      height: 2.4em
+      overflow: hidden
+
+      .noticias__track
+        display: flex
+        gap: 30px
+        width: max-content
+        animation: scrollNews 100s linear infinite
+
+        &:hover
+          animation-play-state: paused
+
+      h3
+        width: max-content
+        text-wrap: nowrap
+        color: white
+        flex-shrink: 0
+
+  &__lista
+    width: 100%
+    height: 100%
+    grid-area: 1 / 2 / 3 / 3
+    display: flex
+    flex-direction: column
+    align-items: center
+    transition: .5s ease-in-out
+
+    .logo
+      display: flex
+      width: 200px
+      height: 120px
+      flex-direction: column
+      position: relative
+      align-items: center
+      scale: .8
+
+      img
+        position: relative
+
+        &:first-child
+          width: 200px
+          height: 90px
+          top: 0
+          left: 0
+
+        &:not(:first-child)
+          width: 140px
+          height: 60px
+          top: -30px
+          filter: brightness(100)
+          left: -3px
+
+    .ocorrencias
+      background-color: #131010
+      border-radius: 12px
+      border: 4px solid $brand-2-color
+      width: $fill
+      height: 100%
+      padding: 0 3px 3px
+      display: flex
+      flex-direction: column
+      margin: 0 30px
+      overflow: hidden
+      position: relative
+
+      &__header
+        margin-block: 15px 10px
+        text-align: center
+
+        h1
+          @include font-style(Bold, 1.8em, $line-height: 1)
+
+      &__list
+        border: 3px solid color.scale($brand-2-color, $alpha: -50%)
+        border-radius: 8px
+        gap: 10px
+        display: flex
+        flex-direction: column
+        overflow-y: scroll
+        scrollbar-color: $brand-2-color $background-color
+        scrollbar-width: thin
+
+        &::-webkit-scrollbar
+          width: 10px
+
+        &::-webkit-scrollbar-track
+          background: $background-color
+
+        &::-webkit-scrollbar-thumb
+          background: $brand-2-color
+          border-radius: 5px
+
+        &::-webkit-scrollbar-thumb:hover
+          background: $brand-focus-color
+
+        &-add
+          border: 1px solid #c98c8ca8
+          padding: 2px 10px
+          border-radius: 12px
+          display: flex
+          align-items: center
+          justify-content: center
+          z-index: 10
+          position: absolute
+          background-color: #7e0000
+          right: 30px
+          bottom: 15px
+          cursor: pointer
+
+        .ocorrencia
+          display: flex
+          margin: 0 8px
+          padding: 5px
+          overflow: hidden
+          border-radius: 6px
+          background-color: #333
+          gap: 10px
+          min-height: 90px
+
+          &__thumb
+            width: 120px
+            height: 88px
+            overflow: hidden
+            border-radius: 6px
+            flex: 1 0 auto
+
+            img
+              width: 100%
+              height: 100%
+              object-fit: cover
+
+          &__dados
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            position: relative
+            width: $fill
+
+            .impacto
+              position: absolute
+              right: 0
+              top: 0
+              border: 1px solid #000000bb
+              padding: 0
+              border-radius: 60%
+              width: 21px
+              height: 21px
+              display: flex
+              align-items: center
+              justify-content: center
+
+              &.alto
+                background-color: #6b0d0dad
+
+                &::after
+                  content: '🔺'
+                  position: relative
+                  filter: brightness(10)
+
+              &.pequeno
+                background-color: #0d6b21ad
+
+                &::after
+                  content: '🔺'
+                  position: relative
+                  filter: brightness(10)
+
+              &.neutro
+                background-color: #6b650dad
+
+                &::after
+                  content: '-'
+                  font-weight: Bold
+                  position: relative
+                  filter: brightness(10)
+
+            .categoria
+              @include font-style(Arial, 0.8125em)
+              display: flex
+              align-items: center
+              gap: 10px
+
+              p
+                background-color: #00000059
+                border: 1px solid #000000bb
+                padding: 2px 10px
+                border-radius: 5px
+                text-align: center
+                width: 75px
+                overflow: hidden
+                white-space: nowrap
+                text-overflow: ellipsis
+
+              small
+                font-size: .4em
+
+            .descricao
+              @include font-style(Arial, 0.75em)
+              display: flex
+              margin: 3px 5px
+              flex: 1 auto
+
+            .gerencia
+              @include font-style(Arial, 0.8125em)
+              display: flex
+              gap: 10px
+
+              p
+                background-color: #00000085
+                border: 1px solid #000000db
+                padding: 2px 10px
+                border-radius: 5px
+                text-align: center
+                width: 90px
+                overflow: hidden
+                white-space: nowrap
+                text-overflow: ellipsis
+
+@keyframes scrollNews
+  0%
+    transform: translateX(0)
+  100%
+    transform: translateX(-50%)
+
+@keyframes expand
+  0%
+    scale: 1
+
+  50%
+    scale: 1.4
+
+  100%
+    scale: 1
+    position: fixed
+
+@keyframes shrink
+  0%
+    scale: 1
+
+  50%
+    scale: .6
+
+  100%
+    scale: 1
+    position: relative

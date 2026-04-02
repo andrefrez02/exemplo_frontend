@@ -1,0 +1,38 @@
+@use '../_vars' as *
+
+@mixin wrapper
+  max-width: 1200px
+  width: $fill
+  margin-inline: auto
+  box-sizing: border-box
+
+@mixin text-shadow($blur: 15px, $color: #000, $x: 0, $y: 0)
+  text-shadow: $x $y $blur $color
+
+@mixin shadow($inset: false, $x: 0, $y: 0, $blur: 15px, $spread: 5px, $color: #000)
+  @if $inset
+    box-shadow: inset $x $y $blur $spread $color
+  @else
+    box-shadow: $x $y $blur $spread $color
+
+@mixin font-style($family: Regular, $size: 16px, $weight: normal, $line-height: 1.5)
+  font-family: $family
+  font-size: $size
+  font-weight: $weight
+  line-height: $line-height
+
+@mixin font($family, $size)
+  font-family: $family
+  font-size: $size
+
+=media-query($device)
+  @media screen and (max-width: $device)
+    @content
+
+=media-greater($device)
+  @media screen and (min-width: ($device + 1))
+    @content
+
+=media-minor($device)
+  @media screen and (max-width: ($device + 1))
+    @content

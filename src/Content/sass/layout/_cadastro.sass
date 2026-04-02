@@ -1,0 +1,242 @@
+@use '../_vars' as *
+@use '../base/_mixins' as *
+@use 'sass:color'
+
+.cadastro
+  @include wrapper
+  font-family: Inter, Arial
+  font-size: 16px
+  width: $fit
+  height: $fit
+  position: relative
+  z-index: 1
+  margin: auto
+  overflow: hidden
+  text-align: center
+  margin: 30px auto
+  border-radius: 6px
+
+  &::before
+    content: ''
+    width: $fill
+    height: $fill
+    position: absolute
+    top: 0
+    left: 0
+    z-index: -1
+    background:
+      image: url(../src/content/imagens/formulariobg2.png)
+      position: center
+      size: 100% 100%
+      color: #000000dd
+    filter: opacity(.99)
+
+  &__bg
+    width: $fill
+    height: $fill
+    position: fixed
+    z-index: -1
+    top: 0
+    left: 0
+    background:
+      image: linear-gradient(45deg, color.scale($fourth-color, $alpha: -60%), color.scale($fourth-color, $alpha: -60%)), url(../src/content/imagens/bg4.jpg)
+      position: center
+      repeat: no-repeat
+      size: cover
+    user-select: none
+    -moz-user-select: none
+    -webkit-user-select: none
+    pointer-events: none
+
+  &-form
+    display: flex
+    flex-direction: column
+    gap: 15px
+    align-items: center
+
+    &__header
+      width: $fill
+      padding: 2px
+      border-radius: 15px 15px 0 0
+      overflow: hidden
+
+      &-bg
+        padding: 2px 30px
+        background-color: $dark-3-color
+        display: flex
+        align-items: center
+        justify-content: space-between
+        gap: 30px
+
+        img
+          width: 60px
+          height: 60px
+
+        h1
+          @include font-style(Medium, 1.875em)
+
+        .cancelBtn
+          display: flex
+          align-items: center
+          gap: 10px
+          padding: 2px 12px
+          background-color: $brand-focus-color
+          border: 1px solid $brand-color
+          border-radius: 5px
+          opacity: .7
+
+          span
+            font-size: 1.3em
+            font-weight: bold
+
+          &:hover, &:active, &:focus
+            opacity: 1
+            cursor: pointer
+
+    &__group
+      display: grid
+      grid-template-columns: repeat(3, 1fr)
+      gap: 5px 30px
+
+      &_2
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: center
+        align-items: center
+        align-content: center
+        gap: 15px
+
+        &-input
+          background-color: #b1b1b1
+          border: 2px solid color.scale(#b1b1b1, $blackness: 90%)
+          border-radius: 5px
+          padding: 4px 10px
+          display: flex
+          align-items: center
+          gap: 5px
+          cursor: pointer
+
+          img
+            width: 40px
+            height: 40px
+            filter: brightness(.6)
+
+          span
+            padding: 0 12px
+
+      &_3
+        @extend .cadastro-form__group_2
+
+        &-input
+          @extend .cadastro-form__group_2-input
+
+          &.grande
+            background-color: #6b0d0d
+            border: 2px solid color.scale(#6b0d0d, $blackness: 60%)
+
+          &.pequeno
+            background-color: #0d6b21
+            border: 2px solid color.scale(#0d6b21, $blackness: 60%)
+
+          &.medio
+            background-color: #c7bb0f
+            border: 2px solid color.scale(#c7bb0f, $blackness: 60%)
+
+      &_4
+        @extend .cadastro-form__group
+        grid-template-columns: repeat(2, 1fr)
+
+        &-input-group
+          @extend .cadastro-form__input-group
+          grid-template-columns: 1fr 1fr !important
+
+      &_5
+        @extend .cadastro-form__group_3
+        place-self: flex-start
+        margin-left: 5px
+
+        .cadastro-form
+          &__input-group
+            @extend .cadastro-form__input-group
+            grid-template-columns: 0.5fr 1fr 1fr !important
+
+          &__checkbox-group
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            justify-content: center
+
+            &-item
+              display: flex
+              align-items: center
+              gap: 10px
+
+      &_6
+        @extend .cadastro-form__group
+        grid-template-columns: 1fr 1.5fr !important
+
+        &-thumbs
+          @extend .cadastro-form__input-group
+          grid-template-columns: 1fr 1fr !important
+          width: $fill
+          margin: 0 !important
+
+          .thumb
+            height: 120px
+            width: 180px
+            overflow: hidden
+            border-radius: 10px
+
+            &:not(:first-of-type)
+              border: 3px solid #fff
+
+            img
+              width: 100%
+              height: 100%
+              object-fit: cover
+
+        textarea
+          height: calc(100% - 50px)
+
+    &__input
+      &-group
+        display: grid
+        grid-template-columns: .5fr 1fr
+        align-items: center
+        gap: 15px
+        margin-top: 10px
+
+        label
+          display: flex
+          width: fit-content
+          place-self: self-end
+          align-self: center
+
+        input
+          border-color: color.scale($placeholder-text-color, $alpha: -60%)
+
+    &__button-group
+      @extend .cadastro-form__group
+      grid-template-columns: repeat(2, 1fr)
+      margin-bottom: 30px
+
+    &__submit, &__save
+      padding-block: 12px
+
+    &__save, .btnSave
+      background-color: #7a8896
+      border-color: #303c4869
+
+    &__hr
+      width: 90%
+      height: 2px
+      margin: 14px 0
+      background-color: #000
+
+    &__titulo
+      display: flex
+      width: fit-content
+      text-align: start
+      place-self: self-start
+      margin-left: 30px

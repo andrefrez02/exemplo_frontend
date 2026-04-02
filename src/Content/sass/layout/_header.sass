@@ -1,0 +1,50 @@
+@use 'sass:color'
+@use '../_vars' as *
+@use '../base/fonts' as *
+@use '../base/_mixins' as *
+
+.header
+  background-color: $fourth-focus-color
+  border-bottom: 5px solid $brand-color
+  z-index: 5
+  position: relative
+
+  &::before
+    @include shadow(true, $blur: 50px, $spread: -10px)
+    content: ''
+    width: -webkit-fill-available
+    height: -webkit-fill-available
+    position: absolute
+    z-index: -1
+    top: 0
+    left: 0
+    background-image: linear-gradient(45deg, color.scale($fourth-color, $alpha: -90%), color.scale($fourth-color, $alpha: -20%)), url(../src/content/imagens/bg3.jpg)
+    background-position: center, 0 40%
+    background-repeat: no-repeat
+    background-size: cover
+    filter: opacity(.7) brightness(.6) blur(2px)
+    transform: scaleX(-1)
+
+  &-div
+    @include wrapper
+    padding: 20px 0
+    display: flex
+    justify-content: space-between
+
+    &__logo
+      display: block
+
+    &__options
+      display: flex
+      align-items: center
+      gap: 15px
+
+  &.simple
+    .header
+      &-div
+        padding: 12px 0
+        &__options, &__logo
+          a
+            img
+              width: 150px
+              height: 50px

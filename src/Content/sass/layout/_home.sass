@@ -1,0 +1,153 @@
+@use '../_vars' as *
+@use '../base/_mixins' as *
+@use 'sass:color'
+
+.home
+  @include wrapper
+  @include shadow(false)
+  height: $fill
+  background-color: color.change($fourth-color, $lightness: 3%)
+  position: relative
+  z-index: 1
+  overflow: hidden
+  padding: 15px 30px
+  position: relative
+  z-index: 1
+
+  &__bg
+    width: $fill
+    height: $fill
+    position: fixed
+    z-index: -1
+    top: 0
+    left: 0
+    background-image: linear-gradient(45deg, color.scale($brand-color, $alpha: -95%), color.scale($fourth-color, $alpha: -50%)), url(../src/content/imagens/bg3.jpg)
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    filter: opacity(1) brightness(0.6) blur(2px)
+    user-select: none
+    -moz-user-select: none
+    -webkit-user-select: none
+    pointer-events: none
+
+  .destaque
+    width: 100%
+    height: 500px
+    position: relative
+    z-index: 1
+    display: flex
+    justify-content: left
+    align-items: end
+
+    .fundo
+      overflow-x: hidden
+      position: absolute
+      width: calc(100% + 60px)
+      height: calc(100% + 60px)
+      top: -30px
+      left: -30px
+      z-index: -1
+
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: 0 60%
+
+    &-noticia
+      position: relative
+      z-index: 2
+      width: 100%
+      margin: 15px 90px
+
+      &__header
+        @include font-style($family: Bold, $size: 1.875em)
+        @include text-shadow(10px)
+        background-color: $brand-color
+        width: $fit
+        border-radius: 5px
+        padding: 0px 10px
+
+      &__footer
+        @include font-style($family: Medium, $size: 1.5em)
+        background-color: $secondary-color
+        width: $fit
+        border-radius: 5px
+        padding: 3px 24px
+        margin-top: 30px
+
+      &__text
+        display: flex
+        flex-direction: column
+        gap: 0
+
+        .highlight-text-container
+          margin-top: -30px
+
+        svg
+          color: #fff
+          stroke: #222
+
+        .text
+
+          &-high
+            font-size: 3em
+            stroke-width: 6px !important
+            margin-top: 0
+
+          &-medium
+            font-size: 2.8125em
+            stroke-width: 6px !important
+
+          &-low
+            font-size: 1.5em
+            stroke-width: 4px !important
+            margin-top: -15px
+
+  .valores
+    margin-block: 50px 30px
+    display: flex
+    justify-content: space-evenly
+    align-items: flex-start
+
+    & > div
+      // flex: 1
+      width: 280px
+      display: grid
+      grid-auto-rows: 120px 45px auto
+      justify-items: center
+      text-align: center
+
+      img
+        width: 80px
+        height: $fill
+        aspect-ratio: 1/2
+        object-position: bottom
+        object-fit: contain
+
+      h1
+        @include font-style(Regular, $size: 1.875em)
+
+      p
+        @include font-style(Regular, $size: 0.75em)
+
+    .principal
+      // flex: 1.15
+      width: 300px
+      margin-top: -20px
+
+      img
+        aspect-ratio: 2 / 1
+        width: 200px
+
+      h1
+        @include font-style(Medium, $size: 2.25em)
+
+      p
+        @include font-style(Regular, $size: 0.9375em)
+        margin-top: 8px
+
+    .valor
+      img
+        transform: matrix(-1, 0, 0, 1, 0, 0)

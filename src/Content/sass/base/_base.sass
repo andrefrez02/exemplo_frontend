@@ -1,0 +1,131 @@
+@use '../_vars' as *
+@use 'sass:color'
+@use '../base/fonts' as *
+@use '../base/_mixins' as *
+
+html, body, #root
+  overflow-x: hidden
+
+html
+  @include font-style("Regular", 16px, normal, 1.5)
+  width: 100dvw
+  // height: 100dvh
+  display: flex
+  background-color: $background-color
+  color: $text-color
+
+body, #root
+  margin: 0
+  padding: 0
+  width: $fill
+  height: $fill
+
+#root
+  display: flex
+  flex-direction: column
+
+.heading, .heading > p
+  color: #fff
+  font-weight: bold
+
+  & > div
+    font-weight: 400
+
+h1, h2, h3, h4, h5, h6, p, span, small
+  color: #fff
+  margin: 0
+  padding: 0
+
+img
+  max-width: 100%
+  vertical-align: middle
+  border-style: none
+  color: transparent
+  padding: 0
+  margin: 0
+
+a
+  text-decoration: none
+  color: $text-color
+
+.btn, .btn-border
+  color: #fff
+  text-decoration: none
+  padding: 5px 20px
+  text-align: center
+
+.btn
+  @include font("Medium", 18px)
+
+.btn-border
+  @include font("Bold", 20px)
+  border: 3px solid currentColor
+  border-radius: 5px
+
+.highlight-text-container
+  $y: 1.8em
+  @include font-style("Bold", $y, bold, 1.5)
+  color: #fff
+  width: 100%
+  height: $y
+  stroke-width: 5px
+
+  svg
+    fill: currentColor
+    color: currentColor
+    stroke: #000
+    stroke-width: inherit
+    paint-order: stroke
+    stroke-linejoin: round
+
+%buttonPositive
+  font-family: Inter, Arial
+  font-size: 1.125em
+  color: #fff
+  background-color: $brand-2-color
+  border: $third-color solid 2px
+  border-radius: 3px
+  padding: 6px 24px
+
+  &:hover, &:active, &:focus
+    cursor: pointer
+
+#btnSubmit, .btnSave
+  @extend %buttonPositive
+
+%input
+  font-family: Inter, Arial
+  font-weight: lighter
+  font-size: 0.875em
+  color: $placeholder-text-color
+  background-color: transparent
+  border: $placeholder-text-color solid 2px
+  border-radius: 3px
+  padding: 6px 16px
+  width: $fit
+
+input
+  @extend %input
+
+select
+  font-family: Inter, Arial
+  font-weight: lighter
+  font-size: 0.875em
+  color: #1e1e1e
+  background-color: #fff
+  border: $placeholder-text-color solid 2px
+  border-radius: 12px
+  padding: 6px
+  width: 220px
+
+textarea
+  font-family: Inter, Arial
+  font-weight: lighter
+  font-size: 0.875em
+  color: #1e1e1e
+  background-color: #fff
+  border: $placeholder-text-color solid 2px
+  border-radius: 6px
+  padding: 12px
+  width: $fill
+  resize: none
