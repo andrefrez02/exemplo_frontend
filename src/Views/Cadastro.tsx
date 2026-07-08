@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
-import megafone from "../Content/Imagens/megafone.svg";
+import megafone from "../Content/Imagens/megafone.webp";
 import localidade from "../Content/Imagens/localidade.jpg";
-import jornalista from "../Content/Imagens/jornalista.gif";
+import jornalista from "../Content/Imagens/jornalista-thumb.webp";
 
 export default function cadastro() {
   const navigate = useNavigate();

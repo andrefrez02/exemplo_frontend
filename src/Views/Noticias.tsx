@@ -2,12 +2,13 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import logoVeraNews from "../Content/Imagens/vera-news.svg";
 import HighlightText from "../Components/HighlightText";
-import globo from "../Content/Imagens/globo.png";
+import globo from "../Content/Imagens/globo.webp";
 import clima from "../Content/Imagens/clima.svg";
 import logoVera from "../Content/Imagens/vera-logo-vertical.svg";
-import megafone from "../Content/Imagens/megafone.svg";
+import megafone from "../Content/Imagens/megafone.webp";
 import bandeira from "../Content/Imagens/brasil-brasil.png";
 import predio from "../Content/Imagens/localidade.jpg";
+import jornalistaVideo from "../Content/Imagens/jornalista.mp4";
 import maximaze from "../Content/Imagens/maximaze.svg";
 import minimize from "../Content/Imagens/minimize.svg";
 
@@ -109,6 +110,14 @@ export default function Noticias() {
                   : "shrink .2s ease-in forwards",
               }}
             >
+              <video
+                className="destaque__video"
+                src={jornalistaVideo}
+                autoPlay
+                muted
+                loop
+                playsInline
+              />
               <img
                 src={maximaze}
                 alt=""

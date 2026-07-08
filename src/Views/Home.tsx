@@ -1,5 +1,5 @@
 import localidade from "../Content/Imagens/localidade.jpg";
-import visao from "../Content/Imagens/megafone.svg";
+import visao from "../Content/Imagens/megafone.webp";
 import missao from "../Content/Imagens/brasil-brasil.png";
 import HighlightText from "../Components/HighlightText";
 

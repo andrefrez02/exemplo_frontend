@@ -334,7 +334,7 @@ textarea {
   z-index: -1;
   top: 0;
   left: 0;
-  background-image: linear-gradient(45deg, rgba(204, 34, 41, 0.05), rgba(37, 39, 102, 0.5)), url(../Imagens/bg3.jpg);
+  background-image: linear-gradient(45deg, rgba(204, 34, 41, 0.05), rgba(37, 39, 102, 0.5)), url(../Imagens/bg3.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -494,7 +494,7 @@ textarea {
   z-index: -1;
   top: 0;
   left: 0;
-  background-image: linear-gradient(45deg, rgba(37, 39, 102, 0.1), rgba(37, 39, 102, 0.8)), url(../Imagens/bg3.jpg);
+  background-image: linear-gradient(45deg, rgba(37, 39, 102, 0.1), rgba(37, 39, 102, 0.8)), url(../Imagens/bg3.webp);
   background-position: center, 0 40%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -576,7 +576,7 @@ textarea {
   top: 0;
   left: 0;
   z-index: -1;
-  background-image: url(../Imagens/formulariobg.png);
+  background-image: url(../Imagens/formulariobg.webp);
   background-position: center;
   background-size: 100% 100%;
   background-color: rgba(0, 0, 0, 0.8666666667);
@@ -589,7 +589,7 @@ textarea {
   z-index: -1;
   top: 0;
   left: 0;
-  background-image: linear-gradient(45deg, rgba(37, 39, 102, 0.1), rgba(37, 39, 102, 0)), url(../Imagens/globobg.png), url(../Imagens/bg3-inv.jpg);
+  background-image: linear-gradient(45deg, rgba(37, 39, 102, 0.1), rgba(37, 39, 102, 0)), url(../Imagens/globobg.webp), url(../Imagens/bg3-inv.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -671,7 +671,7 @@ textarea {
   z-index: -1;
   top: 0;
   left: 0;
-  background-image: linear-gradient(45deg, rgba(204, 34, 41, 0.05), #252766), url(../Imagens/bg3.jpg);
+  background-image: linear-gradient(45deg, rgba(204, 34, 41, 0.05), #252766), url(../Imagens/bg3.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -737,17 +737,13 @@ textarea {
   cursor: pointer;
   transition: 1s linear;
 }
-.noticias .centro .destaque::after {
-  content: "";
+.noticias .centro .destaque__video {
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url(../Imagens/jornalista.gif);
-  background-position: center 0%;
-  background-size: cover;
-  transition: 1s linear;
+  object-fit: cover;
 }
 .noticias__footer {
   display: flex;
@@ -1212,7 +1208,7 @@ textarea {
   top: 0;
   left: 0;
   z-index: -1;
-  background-image: url(../Imagens/formulariobg2.png);
+  background-image: url(../Imagens/formulariobg2.webp);
   background-position: center;
   background-size: 100% 100%;
   background-color: rgba(0, 0, 0, 0.8666666667);
@@ -1225,7 +1221,7 @@ textarea {
   z-index: -1;
   top: 0;
   left: 0;
-  background-image: linear-gradient(45deg, rgba(37, 39, 102, 0.4), rgba(37, 39, 102, 0.4)), url(../Imagens/bg4.jpg);
+  background-image: linear-gradient(45deg, rgba(37, 39, 102, 0.4), rgba(37, 39, 102, 0.4)), url(../Imagens/bg4.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
