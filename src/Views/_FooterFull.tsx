@@ -1,73 +1,16 @@
-import { Link } from "react-router-dom";
-import logoVertical from "../Content/Imagens/logo-hagana-vertical.svg";
-import linkIcon from "../Content/Imagens/link-icon.svg";
-import emailIcon from "../Content/Imagens/email-icon.svg";
-import localIcon from "../Content/Imagens/local-icon.svg";
-import telIcon from "../Content/Imagens/tel-icon.svg";
-import facebook from "../Content/Imagens/facebook.svg";
-import instagram from "../Content/Imagens/instagram.svg";
-import linkedin from "../Content/Imagens/linkedin.svg";
-import twitter from "../Content/Imagens/twitter.svg";
+import frezdevLogo from "../Content/Imagens/frezdev-logo-light.svg";
 
 export default function FooterFull() {
   return (
     <footer className="footer">
-      <div className="footer-div">
-        <div className="footer-div__logo">
-          <Link to="/">
-            <img
-              src={logoVertical}
-              alt="Tevel News Logo"
-              title="Tevel News Logo"
-            />
-            <small>Desenvolvimento</small>
-            <span>Equipe BI & TI</span>
-          </Link>
-        </div>
-        <div className="footer-div__info">
-          <a className="link" href="https://erp-app-prod.grupohagana.com.br">
-            <img src={linkIcon} alt="Ícone de site" />
-            <span>erp-app-prod.grupohagana.com.br</span>
-          </a>
-          <a className="link" href="/">
-            <img src={emailIcon} alt="Ícone de e-mail" />
-            <span>tevel@hagana.com.br</span>
-          </a>
-          <a className="link" href="/">
-            <img src={localIcon} alt="Ícone de localização" />
-            <span>Rua Cruzeiro, 549 - Barra Funda</span>
-          </a>
-          <a className="link" href="/">
-            <img src={telIcon} alt="Ícone de telefone" />
-            <span>(11) 3393-1717</span>
-          </a>
-        </div>
-        <div className="footer-div__links">
-          <Link className="link" to="/">
-            Grupo Haganá
-          </Link>
-          <Link className="link" to="/noticias">
-            Haganá Tevel
-          </Link>
-          <Link className="link" to="/cadastro">
-            Checkpoint
-          </Link>
-        </div>
-        <div className="footer-div__social">
-          <a className="link" href="/">
-            <img src={linkedin} alt="LinkedIn" />
-          </a>
-          <a className="link" href="/">
-            <img src={facebook} alt="Facebook" />
-          </a>
-          <a className="link" href="/">
-            <img src={instagram} alt="Instagram" />
-          </a>
-          <a className="link" href="/">
-            <img src={twitter} alt="Twitter" />
-          </a>
-        </div>
-      </div>
+      <a
+        className="footer__brand"
+        href="https://frezdev.com.br"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src={frezdevLogo} alt="FrezDev" title="FrezDev" />
+      </a>
     </footer>
   );
 }

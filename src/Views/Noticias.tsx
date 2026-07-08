@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import logoTevel from "../Content/Imagens/logo.svg";
+import logoVeraNews from "../Content/Imagens/vera-news.svg";
 import HighlightText from "../Components/HighlightText";
 import globo from "../Content/Imagens/globo.png";
 import clima from "../Content/Imagens/clima.svg";
-import logoHagana from "../Content/Imagens/logo-hagana-vertical2.svg";
+import logoVera from "../Content/Imagens/vera-logo-vertical.svg";
 import megafone from "../Content/Imagens/megafone.svg";
-import bandeira from "../Content/Imagens/israel-brasil.png";
-import predio from "../Content/Imagens/predio-hagana.png";
+import bandeira from "../Content/Imagens/brasil-brasil.png";
+import predio from "../Content/Imagens/localidade.jpg";
 import maximaze from "../Content/Imagens/maximaze.svg";
 import minimize from "../Content/Imagens/minimize.svg";
 
@@ -25,7 +25,7 @@ export default function Noticias() {
   const renderizarItens = () => {
     const elementos = [];
     const textos = [
-      "Novidade - Site novo da Haganá",
+      "Novidade - Site novo da Vera",
       "Pequeno Impacto - Omissão de Socorro",
       "Pequeno impacto - Perturbação de Sossêgo",
     ];
@@ -42,15 +42,15 @@ export default function Noticias() {
   const renderizarItens2 = () => {
     const elementos = [];
     const nomes = [
-      "Samela de Araujo Silva",
-      "Vitória Dias",
-      "Rodson Keiji Yoshitami Viana",
+      "Bruno Carvalho Lima",
+      "Renata Fogaça",
+      "Thiago Menezes Okabe",
     ];
     const horas = ["2", "3", "4"];
     const cargos = ["Gerencia Sênior", "Gerencia Geral", "Gerencia Sênior"];
-    const gerentes = ["Márcia Dutra", "Jaime Donato", "Flávio Barril Nunes"];
+    const gerentes = ["Patrícia Salles", "Eduardo Nakamura", "Larissa Bicalho"];
     const ocorrencias = [
-      "Novidade - Site novo da Haganá",
+      "Novidade - Site novo da Vera",
       "Alto Impacto - Omissão de Socorro",
       "Pequeno impacto - Perturbação de Sossêgo",
     ];
@@ -98,7 +98,7 @@ export default function Noticias() {
           <section className="centro">
             <header className="logo">
               <Link to="/">
-                <img src={logoTevel} alt="" />
+                <img src={logoVeraNews} alt="" />
               </Link>
             </header>
             <div
@@ -132,7 +132,7 @@ export default function Noticias() {
         >
           <div className="logo">
             <img src={bandeira} alt="" />
-            <img src={logoHagana} alt="" />
+            <img src={logoVera} alt="" />
           </div>
           <div className="ocorrencias">
             <div className="ocorrencias__header">
@@ -169,7 +169,7 @@ export default function Noticias() {
             </div>
           </div>
           <div className="logo">
-            <img src={logoHagana} alt="" />
+            <img src={logoVera} alt="" />
           </div>
           <div className="headline">
             <div className="categoria">

@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import megafone from "../Content/Imagens/megafone.svg";
-import predioHagana from "../Content/Imagens/predio-hagana.png";
+import localidade from "../Content/Imagens/localidade.jpg";
 import jornalista from "../Content/Imagens/jornalista.gif";
 
 export default function cadastro() {
@@ -145,7 +145,7 @@ export default function cadastro() {
           <div className="cadastro-form__group_6">
             <div className="cadastro-form__group_6-thumbs">
               <div className="thumb">
-                <img src={predioHagana} alt="" />
+                <img src={localidade} alt="" />
               </div>
               <div className="thumb">
                 <img src={jornalista} alt="" />

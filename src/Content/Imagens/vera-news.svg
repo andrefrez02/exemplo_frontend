@@ -1,0 +1,26 @@
+<svg width="244" height="82" viewBox="0 0 244 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F2F3F4"></stop>
+      <stop offset="0.42" stop-color="#B9BABC"></stop>
+      <stop offset="0.5" stop-color="#8B8B8C"></stop>
+      <stop offset="0.62" stop-color="#7C7D7E"></stop>
+      <stop offset="1" stop-color="#C7C8C9"></stop>
+    </linearGradient>
+  </defs>
+
+  
+  <g fill="#CC2229" transform="skewX(-18)">
+    <rect x="24" y="46" width="14" height="4.4"></rect>
+    <rect x="44" y="46" width="26" height="4.4"></rect>
+    <rect x="76" y="46" width="40" height="4.4"></rect>
+    <rect x="122" y="46" width="20" height="4.4"></rect>
+  </g>
+
+  
+  <text x="6" y="52" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-style="italic" font-size="50" letter-spacing="-1" fill="#3a3a3a" transform="translate(2,3)">Vera</text>
+  <text x="6" y="52" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-style="italic" font-size="50" letter-spacing="-1" fill="url(#metal)" stroke="#6c6d6e" stroke-width="0.6">Vera</text>
+
+  
+  <text x="92" y="74" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-style="italic" font-size="40" letter-spacing="-1" fill="#252766" stroke="#ffffff" stroke-width="2.4" paint-order="stroke">NEWS</text>
+</svg>

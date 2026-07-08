@@ -1,21 +1,22 @@
-import { useState } from "react";
-import predioHagana from "../Content/Imagens/predio-hagana.png";
+import localidade from "../Content/Imagens/localidade.jpg";
 import visao from "../Content/Imagens/megafone.svg";
-import missao from "../Content/Imagens/israel-brasil.png";
+import missao from "../Content/Imagens/brasil-brasil.png";
 import HighlightText from "../Components/HighlightText";
 
-const noticeParagraphs = [
-  "Este site foi integralmente desenvolvido por mim durante meu per\u00edodo de atua\u00e7\u00e3o na Hagan\u00e1, empresa na qual trabalhei anteriormente. Apesar de a codifica\u00e7\u00e3o ter sido feita por mim, os direitos de uso e as licen\u00e7as do site pertencem exclusivamente \u00e0 referida empresa. O site est\u00e1 sendo exibido apenas para fins de portf\u00f3lio e estudo, com o objetivo de demonstrar minhas habilidades t\u00e9cnicas e minha experi\u00eancia profissional.",
-  "Por esse motivo, a divulga\u00e7\u00e3o do link \u00e9 estritamente proibida. A visualiza\u00e7\u00e3o \u00e9 permitida somente com minha autoriza\u00e7\u00e3o pr\u00e9via, e qualquer forma de compartilhamento n\u00e3o autorizado ser\u00e1 considerada inadequada.",
-  "Ressalto ainda que os c\u00f3digos e identifica\u00e7\u00f5es relacionados aos direitos autorais da empresa n\u00e3o est\u00e3o dispon\u00edveis neste ambiente e n\u00e3o ser\u00e3o exibidos ou compartilhados sob nenhuma circunst\u00e2ncia.",
-  "Para mais informa\u00e7\u00f5es ou para conhecer o site original, acesse diretamente o endere\u00e7o oficial da Hagan\u00e1.",
-];
+// Disclaimer popup desativado
+// const noticeParagraphs = [
+//   "Este site foi integralmente desenvolvido por mim durante meu período de atuação na Vera, empresa na qual trabalhei anteriormente. Apesar de a codificação ter sido feita por mim, os direitos de uso e as licenças do site pertencem exclusivamente à referida empresa. O site está sendo exibido apenas para fins de portfólio e estudo, com o objetivo de demonstrar minhas habilidades técnicas e minha experiência profissional.",
+//   "Por esse motivo, a divulgação do link é estritamente proibida. A visualização é permitida somente com minha autorização prévia, e qualquer forma de compartilhamento não autorizado será considerada inadequada.",
+//   "Ressalto ainda que os códigos e identificações relacionados aos direitos autorais da empresa não estão disponíveis neste ambiente e não serão exibidos ou compartilhados sob nenhuma circunstância.",
+//   "Para mais informações ou para conhecer o site original, acesse diretamente o endereço oficial da Vera.",
+// ];
 
 export default function Home() {
-  const [isNoticeOpen, setIsNoticeOpen] = useState(true);
+  // const [isNoticeOpen, setIsNoticeOpen] = useState(true);
 
   return (
     <>
+      {/* Disclaimer popup desativado
       {isNoticeOpen ? (
         <div className="home-notice" role="dialog" aria-modal="true">
           <div
@@ -38,11 +39,12 @@ export default function Home() {
           </section>
         </div>
       ) : null}
+      */}
       <div className="home__bg"></div>
       <main className="home">
         <div className="destaque">
           <div className="fundo">
-            <img src={predioHagana} alt="Imagem do prédio da Haganá" />
+            <img src={localidade} alt="Imagem da localidade da Vera" />
           </div>
           <div className="destaque-noticia">
             <header className="destaque-noticia__header">BREAKING NEWS</header>
@@ -53,7 +55,7 @@ export default function Home() {
               />
               <HighlightText Text="NOTÍCIAS AO VIVO" Classname="text-medium" />
               <HighlightText
-                Text="O portal de notícias da Tevel unido à Haganá"
+                Text="O portal de notícias da Vera"
                 Classname="text-low"
               />
             </div>
